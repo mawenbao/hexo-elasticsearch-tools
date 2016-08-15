@@ -128,7 +128,7 @@ def to_actions(articles, category_map, excludes, index, doctype):
             '_index': index,
             '_type': doctype,
             '_op_type': 'index',
-            '_id': art_path,
+            '_id': art_path.strip('.html').strip('/').replace('/', '.'),
             '_source': {
                 'title': a['title'],
                 'date': parse_datetime(a['date']),
