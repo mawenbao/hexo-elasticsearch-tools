@@ -9,7 +9,7 @@
             "dynamic": false,
             "date_detection": false,
             "_all": {
-                  "analyzer": "ik_smart",
+                  "analyzer": "ik_max_word",
                   "search_analyzer": "ik_smart",
                   "term_vector": "no"
             },
@@ -18,7 +18,7 @@
                     "type": "string" ,
                     "term_vector": "with_positions_offsets",
                     "include_in_all": true,
-                    "analyzer": "ik_smart",
+                    "analyzer": "ik_max_word",
                     "search_analyzer": "ik_smart"
                 },
                 "slug": {
@@ -49,7 +49,7 @@
                     "type": "string",
                     "term_vector": "with_positions_offsets",
                     "include_in_all": true,
-                    "analyzer": "ik_smart",
+                    "analyzer": "ik_max_word",
                     "search_analyzer": "ik_smart",
                     "norms": { "enabled": false }
                 }
