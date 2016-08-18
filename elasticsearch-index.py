@@ -174,7 +174,7 @@ def main():
     serverAddr = '%s:%d' % (args.host, args.port)
     if args.user and args.passwd:
         serverAddr = '%s:%s@%s' % (args.user, args.passwd, serverAddr)
-    es_client = Elasticsearch([serverAddr], timeout=20)
+    es_client = Elasticsearch([serverAddr], timeout=60)
     if not es_client.ping():
         print('failed to ping elasticsearch server at %s:%d' % (args.host, args.port))
         return -1
